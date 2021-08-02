@@ -16,7 +16,7 @@ def create_possible_number(input_list):
 
             # Create another list to collect other remaining element which is not the element in 'a'
             # Example: in_list = [2,3] | input_list[:i] = [] | input_list[i+1:] = [2,3]
-            in_list = input_list[:i] + input_list[i+1:]
+            in_list = input_list[:i] + input_list[i + 1:]
 
             # Generate all possible value that start with element 'a'
             # Example loop 1: j.a = 2 , j.in_list = 3 >> a+j = 23 >> result = [123]
@@ -34,5 +34,6 @@ sample_space = []
 # Collect all possible number that could be create from input list
 for p in create_possible_number(input_number):
     sample_space.append(p)
-print('Sample space : ', sample_space)
 
+# Display the maximum number from set of possible number
+print('Largest Possible Number : ', max(sample_space))
